@@ -2,15 +2,12 @@
 using namespace std;
 
 int main(void){
+    int n = 4;
+    int multiplcacion;
 
-    for (int i = 5; i >= 1; i--)
-    {
-       for(int j = 1; j <= i; j++)
-       {
-        cout << "*";
-       }
-       cout << "\n";
-       
+    for (int i = 10; i >= 1; i--){
+       multiplcacion = n*i;
+       cout << multiplcacion << "\n";
     }
 
     return 0;
