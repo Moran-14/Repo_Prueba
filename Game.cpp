@@ -11,24 +11,25 @@ void mostrar_matrix(char M[][3], int nfilas, int ncolumnas){
     }
 }
 
-void gestionar_turno(int jugador){
+void gestionar_turno(int jugador, char tablero[][3]){
     int fila, columna;
     cout << "Turno del jugador #" << jugador << "\n";
     cout << "Escoge una posición: ";
     cin >> fila >> columna;
-    //Se pone el caracter del jugador   
+    //TODO: Se pone el caracter del jugador   
+    tablero[fila][columna] = ( (jugador==1)? 'X':'0' );
 }
-
 
 int main(void){
     char tablero[3][3] { {'-', '-', '-'}, {'-', '-', '-'}, {'-', '-', '-'} };
-    mostrar_matrix(tablero, 3, 3);
 
     bool juego_finalizado = false;
 
+    int jugador = 1;
     do{
-        gestionar_turno(1);
-        gestionar_turno(2);
+        mostrar_matrix(tablero, 3, 3);
+        gestionar_turno(jugador, tablero);
+        jugador = ((jugador==1)?2:1);
     }while(!juego_finalizado);
 
     return 0;
