@@ -18,7 +18,7 @@ int main(void){
         acum += cont;
         cont ++;
     }
-
+    
     cout << acum;
 
     return 0;
