@@ -17,6 +17,6 @@ int main(void){
         cout << primo << "\n";
     }
 
-
+    
     return 0;
 }
